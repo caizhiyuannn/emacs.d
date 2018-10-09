@@ -7,5 +7,7 @@ ${EMACS:=emacs} -nw --batch \
                               (user-init-file (expand-file-name "init.el"))
                               (load-path (delq default-directory load-path)))
                            (load-file user-init-file)
-                           (run-hooks (quote after-init-hook)))'
+                           (run-hooks (quote after-init-hook))
+						   (all-the-icons-install-fonts)
+						   )'
 echo "Startup successful"
