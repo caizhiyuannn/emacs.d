@@ -68,5 +68,11 @@
   :config
   (load-theme 'material t))
 
+(use-package exec-path-from-shell
+  :config
+  ; 如果系统为Mac，则将shell的PATH 初始化到emacs。
+  (when (memq window-system '(mac ns))  
+    (exec-path-from-shell-initialize)))
+
 
 (provide 'init-use-packages)

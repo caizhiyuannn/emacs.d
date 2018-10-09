@@ -31,9 +31,7 @@
 		(indent-buffer)
 		(message "Indent buffer.")))))
 
-;; 如果系统为Mac，则将shell的PATH 初始化到emacs。
-;; (when (memq window-system '(mac ns))
-;;  (exec-path-from-shell-initialize))
+
 
 
 

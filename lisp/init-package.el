@@ -24,6 +24,7 @@
 			  evil
 			  material-theme
 			  switch-window
+                          exec-path-from-shell
 			  ))
 
 
