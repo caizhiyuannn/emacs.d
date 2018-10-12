@@ -25,6 +25,8 @@
 			  material-theme
 			  switch-window
                           exec-path-from-shell
+                          web-mode
+                          yaml-mode
 			  ))
 
 

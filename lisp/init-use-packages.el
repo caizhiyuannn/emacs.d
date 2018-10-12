@@ -74,5 +74,14 @@
   (when (memq window-system '(mac ns))  
     (exec-path-from-shell-initialize)))
 
+(use-package web-mode
+  :init
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
+
+(use-package yaml-mode
+  :init
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+
+
 
 (provide 'init-use-packages)
