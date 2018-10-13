@@ -27,6 +27,7 @@
                           exec-path-from-shell
                           web-mode
                           yaml-mode
+                          htmlize
 			  ))
 
 
