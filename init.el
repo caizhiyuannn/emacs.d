@@ -23,3 +23,5 @@
 
 (require 'init-setting)
 (require 'init-use-packages)
+
+(require 'init-org)
