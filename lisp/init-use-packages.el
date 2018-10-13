@@ -6,7 +6,7 @@
   :config
   (smartparens-global-mode)
   (show-smartparens-global-mode))
-  
+
 
 (use-package helm
   :init
@@ -59,7 +59,7 @@
     (setq inhibit-compacting-font-caches t)
     (spaceline-all-the-icons-theme)
     (spaceline-helm-mode)
-;;    (spaceline-emacs-theme)		
+    ;;    (spaceline-emacs-theme)		
     (spaceline-info-mode)
     (setq neo-theme 'icons)))
 
@@ -70,7 +70,7 @@
 
 (use-package exec-path-from-shell
   :config
-  ; 如果系统为Mac，则将shell的PATH 初始化到emacs。
+                                        ; 如果系统为Mac，则将shell的PATH 初始化到emacs。
   (when (memq window-system '(mac ns))  
     (exec-path-from-shell-initialize)))
 
@@ -81,6 +81,27 @@
 (use-package yaml-mode
   :init
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
+
+(use-package htmlize)
+
+(use-package ox-jekyll
+  :config
+  (setq org-publish-project-alist
+        '(
+          ("org-to-jekyllmd"
+           ;; Path to your org files.
+           :base-directory "~/Github/caizhiyuannn.github.io/orgs/"
+           :base-extension "org"
+           ;; Path to your Jekyll project.
+           :publishing-directory "~/Github/caizhiyuannn.github.io/_posts/"
+           :recursive t
+           :publishing-function org-jekyll-publish-to-md
+           ;; :sitemap-filename (org-jekyll-filename-date org-export-output-file-name)
+           ;; :headline-levels 3
+           ;; :html-extension "html"
+           ;; :body-only t ;; Only export section between <body> </body>
+           )
+        )))
 
 
 
