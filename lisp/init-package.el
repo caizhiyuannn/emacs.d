@@ -11,7 +11,6 @@
 			  use-package
 			  smartparens
 			  helm
-			  helm-directory
 			  company
 			  company-lsp
 			  lsp-mode
