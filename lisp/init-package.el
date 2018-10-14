@@ -20,6 +20,7 @@
 			  neotree
 			  all-the-icons
                           spaceline
+                          powerline
 			  evil
 			  material-theme
 			  switch-window
