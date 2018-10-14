@@ -19,7 +19,7 @@
 			  hungry-delete
 			  neotree
 			  all-the-icons
-			  spaceline-all-the-icons
+                          spaceline
 			  evil
 			  material-theme
 			  switch-window
