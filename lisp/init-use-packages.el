@@ -3,6 +3,7 @@
 
 (use-package smartparens
   :init (use-package smartparens-config)
+  :defer t
   :config
   (smartparens-global-mode)
   (show-smartparens-global-mode))
@@ -33,6 +34,7 @@
   )
 
 (use-package lsp-mode
+  :defer t
   :requires (company-lsp)
   :config
   (use-package lsp-python)
@@ -51,40 +53,61 @@
   :config
   (global-hungry-delete-mode))
 
-(when (display-graphic-p)
-  (use-package spaceline-all-the-icons
-    :init
-    (use-package all-the-icons)
-    :config
-    (setq inhibit-compacting-font-caches t)
-    (spaceline-all-the-icons-theme)
-    (spaceline-helm-mode)
-    ;;    (spaceline-emacs-theme)		
-    (spaceline-info-mode)
-    (setq neo-theme 'icons)))
+;; (when (display-graphic-p)
+;;   (use-package spaceline-all-the-icons
+;;     :init
+;;     (use-package all-the-icons)
+;;     :config
+;;     (setq inhibit-compacting-font-caches t)
+;;     ;; (spaceline-all-the-icons-theme)
+;;     (spaceline-helm-mode)
+;;     (spaceline-emacs-theme)		
+;;     (spaceline-info-mode)
+;;     (setq neo-theme 'icons)))
+
+(use-package spaceline
+  :if (display-graphic-p)
+  :init (use-package all-the-icons)
+  :config
+  (setq inhibit-compacting-font-caches t)
+  (spaceline-helm-mode)
+  (spaceline-emacs-theme)
+  (spaceline-info-mode)
+  (setq neo-theme 'icons))
 
 (use-package material-theme
   :ensure t
   :config
   (load-theme 'material t))
 
+;; (use-package exec-path-from-shell
+;;   :ensure t
+;;   :config
+;;   ;; 如果系统为Mac，则将shell的PATH 初始化到emacs。
+;;   (when (memq window-system '(mac ns))  
+;;     (exec-path-from-shell-initialize)))
+
 (use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
+  :ensure t
   :config
-                                        ; 如果系统为Mac，则将shell的PATH 初始化到emacs。
-  (when (memq window-system '(mac ns))  
-    (exec-path-from-shell-initialize)))
+  (exec-path-from-shell-initialize))
 
 (use-package web-mode
+  :defer t
   :init
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode)))
 
 (use-package yaml-mode
+  :defer t
   :init
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
 
-(use-package htmlize)
+(use-package htmlize
+  :defer t )
 
 (use-package ox-jekyll
+  :defer t
   :config
   (setq org-publish-project-alist
         '(
