@@ -34,7 +34,6 @@
   )
 
 (use-package lsp-mode
-  :defer t
   :requires (company-lsp)
   :config
   (use-package lsp-python)
@@ -107,7 +106,6 @@
   :defer t )
 
 (use-package ox-jekyll
-  :defer t
   :config
   (setq org-publish-project-alist
         '(
