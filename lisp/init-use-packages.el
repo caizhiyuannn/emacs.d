@@ -66,12 +66,17 @@
 
 (use-package spaceline
   :if (display-graphic-p)
-  :init (use-package all-the-icons)
+  :init
+  (use-package all-the-icons)
+  (use-package spaceline-config)
   :config
   (setq inhibit-compacting-font-caches t)
   (spaceline-helm-mode)
-  (spaceline-emacs-theme)
-  (spaceline-info-mode)
+  (spaceline-define-segment datetime
+    (format-time-string "%m月%d日 %H:%M"))
+  (spaceline-emacs-theme '(datetime
+                           :face highlight-face))
+  ;; (spaceline-info-mode)
   (setq neo-theme 'icons))
 
 (use-package material-theme
@@ -123,7 +128,5 @@
            ;; :body-only t ;; Only export section between <body> </body>
            )
         )))
-
-
 
 (provide 'init-use-packages)

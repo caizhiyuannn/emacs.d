@@ -19,6 +19,7 @@
 			  hungry-delete
 			  neotree
 			  all-the-icons
+                          spaceline-all-the-icons
                           spaceline
                           powerline
 			  evil
