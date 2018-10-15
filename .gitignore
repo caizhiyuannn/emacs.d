@@ -1,3 +1,4 @@
 elpa
 *.el~
 auto-save-list/
+eshell
