@@ -29,6 +29,7 @@
                           web-mode
                           yaml-mode
                           htmlize
+                          ox-jekyll
 			  ))
 
 
