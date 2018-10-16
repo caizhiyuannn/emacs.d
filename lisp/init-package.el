@@ -29,6 +29,8 @@
                           web-mode
                           yaml-mode
                           htmlize
+                          yasnippet
+                          ox-jekyll
 			  ))
 
 

@@ -116,17 +116,20 @@
         '(
           ("org-to-jekyllmd"
            ;; Path to your org files.
-           :base-directory "~/Github/caizhiyuannn.github.io/orgs/"
+           :base-directory "~/Github/caizhiyuannn.github.io/_orgs/"
            :base-extension "org"
            ;; Path to your Jekyll project.
-           :publishing-directory "~/Github/caizhiyuannn.github.io/_posts/"
+           :publishing-directory "~/Github/caizhiyuannn.github.io/_posts/orgs/"
            :recursive t
            :publishing-function org-jekyll-publish-to-md
            ;; :sitemap-filename (org-jekyll-filename-date org-export-output-file-name)
            ;; :headline-levels 3
            ;; :html-extension "html"
            ;; :body-only t ;; Only export section between <body> </body>
-           )
-        )))
+           ))))
+
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
 
 (provide 'init-use-packages)
