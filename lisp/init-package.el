@@ -31,6 +31,7 @@
                           htmlize
                           yasnippet
                           ox-jekyll
+                          org-mime
 			  ))
 
 

@@ -132,4 +132,7 @@
   :config
   (yas-global-mode 1))
 
+(use-package org-mime)
+
+
 (provide 'init-use-packages)
