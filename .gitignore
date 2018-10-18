@@ -2,3 +2,4 @@ elpa
 *.el~
 auto-save-list/
 eshell
+network-security.data
