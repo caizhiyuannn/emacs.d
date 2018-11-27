@@ -133,6 +133,6 @@
   (yas-global-mode 1))
 
 (use-package org-mime)
-
+(use-package smtpmail)
 
 (provide 'init-use-packages)
