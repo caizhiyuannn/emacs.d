@@ -25,3 +25,5 @@
 (require 'init-use-packages)
 
 (require 'init-org)
+
+(require 'init-latex)
