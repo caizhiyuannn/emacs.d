@@ -32,6 +32,7 @@
                           yasnippet
                           ox-jekyll
                           org-mime
+                          go-mode
 			  ))
 
 
