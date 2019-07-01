@@ -33,6 +33,7 @@
                           ox-jekyll
                           org-mime
                           go-mode
+                          typescript-mode
 			  ))
 
 
